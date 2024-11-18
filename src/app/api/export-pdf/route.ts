@@ -1,6 +1,7 @@
-// app/api/export-pdf/route.ts
 import puppeteer from 'puppeteer';
 import { NextResponse } from 'next/server';
+
+const escapeScriptTags = (markdown: string): string => markdown.replace(/<script/g, '&lt;script').replace(/<\/script>/g, '&lt;/script&gt;');
 
 const markdownToPdfHtml = (markdown: string) => `
 <!DOCTYPE html>
@@ -76,14 +77,17 @@ export async function POST(request: Request) {
 		const data = await request.json();
 		const { markdown } = data;
 
+		// Échapper les balises <script> dans le Markdown
+		const escapedMarkdown = escapeScriptTags(markdown);
+
 		const browser = await puppeteer.launch({
 			headless: 'new',
 		});
 
 		const page = await browser.newPage();
 
-		// Set content with markdown converted to HTML
-		await page.setContent(markdownToPdfHtml(markdown));
+		// Set content with escaped Markdown converted to HTML
+		await page.setContent(markdownToPdfHtml(escapedMarkdown));
 
 		// Wait for any potential dynamic content
 		await page.waitForFunction('document.getElementById("content").innerHTML !== ""');
