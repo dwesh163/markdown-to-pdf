@@ -13,7 +13,7 @@ const markdownToPdfHtml = (markdown: string) => `
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
       font-size: 11pt;
       line-height: 1.5;
-      color: #000000;
+      color: #3c3c43;
       margin: 0;
       padding: 2pt 1pt;
       max-width: 800px;
