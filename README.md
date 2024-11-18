@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Markdown to PDF Converter
 
-## Getting Started
+Easily convert your Markdown files into PDFs with this fast and simple application.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Fast Conversion**: Turn your Markdown files into PDFs in seconds.
+- **Simple Interface**: Use the service via a web interface or an API.
+- **Ready to Use**: No complex setup required.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How to Use?
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Through the Web Interface
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Go to [http://md2pdf.kooked.app](http://md2pdf.kooked.app).  
+2. Paste your Markdown content or upload a file.  
+3. Click "Convert" to generate your PDF.  
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+The application is hosted and ready to use at:  
+[http://md2pdf.kooked.app](http://md2pdf.kooked.app).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Author
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Developed by **Dwesh163**.  
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Thank you for using **Markdown to PDF Converter**!
