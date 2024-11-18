@@ -12,7 +12,7 @@ Easily convert your Markdown files into PDFs with this fast and simple applicati
 
 ### Through the Web Interface
 
-1. Go to [http://md2pdf.kooked.app](md2pdf.kooked.app).  
+1. Go to [md2pdf.kooked.app](http://md2pdf.kooked.app).  
 2. Paste your Markdown content or upload a file.  
 3. Click "Convert" to generate your PDF.  
 
