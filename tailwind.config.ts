@@ -9,6 +9,7 @@ const config: Config = {
 				DEFAULT: {
 					css: {
 						maxWidth: 'none',
+						'--tw-prose-headings': '#3c3c43',
 						code: {
 							backgroundColor: 'rgb(var(--tw-prose-pre-bg))',
 							padding: '0.2em 0.4em',
