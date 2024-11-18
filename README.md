@@ -19,7 +19,7 @@ Easily convert your Markdown files into PDFs with this fast and simple applicati
 ## Deployment
 
 The application is hosted and ready to use at:  
-[http://md2pdf.kooked.app](http://md2pdf.kooked.app).
+[https://md2pdf.kooked.app](md2pdf.kooked.app).
 
 ## Author
 
