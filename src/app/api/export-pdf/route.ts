@@ -76,23 +76,17 @@ export async function POST(request: Request) {
 	try {
 		const data = await request.json();
 		const { markdown } = data;
-
-		// Échapper les balises <script> dans le Markdown
 		const escapedMarkdown = escapeScriptTags(markdown);
-
 		const browser = await puppeteer.launch({
-			headless: 'new',
+			headless: true,
 		});
 
 		const page = await browser.newPage();
 
-		// Set content with escaped Markdown converted to HTML
 		await page.setContent(markdownToPdfHtml(escapedMarkdown));
 
-		// Wait for any potential dynamic content
 		await page.waitForFunction('document.getElementById("content").innerHTML !== ""');
 
-		// Generate PDF
 		const pdf = await page.pdf({
 			format: 'A4',
 			margin: {
@@ -107,7 +101,6 @@ export async function POST(request: Request) {
 
 		await browser.close();
 
-		// Send PDF as response
 		return new NextResponse(pdf, {
 			headers: {
 				'Content-Type': 'application/pdf',
