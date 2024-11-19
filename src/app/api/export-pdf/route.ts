@@ -79,6 +79,8 @@ export async function POST(request: Request) {
 		const escapedMarkdown = escapeScriptTags(markdown);
 		const browser = await puppeteer.launch({
 			headless: true,
+			executablePath: '/usr/bin/chromium-browser',
+			args: ['--no-sandbox', '--disable-dev-shm-usage', '--disable-setuid-sandbox', '--disable-gpu'],
 		});
 
 		const page = await browser.newPage();
