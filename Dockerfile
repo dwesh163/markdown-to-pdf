@@ -5,7 +5,7 @@ WORKDIR /app
 ENV PUPPETEER_SKIP_DOWNLOAD=true
 RUN apk update && apk add --no-cache chromium
 
-COPY package.json ./
+COPY package.json package-lock.json ./
 RUN npm ci
 
 # Builder stage
