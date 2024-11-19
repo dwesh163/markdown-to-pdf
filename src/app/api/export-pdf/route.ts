@@ -86,7 +86,6 @@ export async function POST(request: Request) {
 		const page = await browser.newPage();
 
 		await page.setContent(markdownToPdfHtml(escapedMarkdown));
-
 		await page.waitForFunction('document.getElementById("content").innerHTML !== ""');
 
 		const pdf = await page.pdf({
